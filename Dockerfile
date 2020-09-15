@@ -2,7 +2,7 @@
 #Author: Rokas_Urbelis
 #Email : Rokas.Yang@gmail.com
 #Blog  : https://blog.linux-code.com
-FROM ubuntu:ubuntu:18.04
+FROM ubuntu:18.04
 MAINTAINER RokasUrbelis(Based on github deepin-wine-ubuntu project)
 
 ADD deepin-wine-ubuntu /root/deepin-wine-ubuntu
