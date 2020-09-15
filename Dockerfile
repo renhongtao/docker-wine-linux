@@ -2,7 +2,7 @@
 #Author: Rokas_Urbelis
 #Email : Rokas.Yang@gmail.com
 #Blog  : https://blog.linux-code.com
-FROM ubuntu:latest
+FROM ubuntu:ubuntu:18.04
 MAINTAINER RokasUrbelis(Based on github deepin-wine-ubuntu project)
 
 ADD deepin-wine-ubuntu /root/deepin-wine-ubuntu
@@ -11,6 +11,9 @@ COPY deb/ /root/deepin-wine-ubuntu/
 #COPY sources.list /etc/apt/
 RUN rm -rf /var/lib/apt/lists/*
 RUN apt-get update
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    TZ=Asia/Shanghai 
 
 RUN apt-get install wget git locales ttf-wqy-zenhei sudo tzdata -y
 RUN apt-get clean && apt-get autoclean
